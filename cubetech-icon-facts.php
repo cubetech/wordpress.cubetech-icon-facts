@@ -3,7 +3,7 @@
  * Plugin Name: cubetech Icon Facts
  * Plugin URI: http://www.cubetech.ch
  * Description: cubetech Icon Facts - create some icon facts, reusable within groups and shorttags
- * Version: 1.0
+ * Version: 1.1
  * Author: cubetech GmbH
  * Author URI: http://www.cubetech.ch
  */
