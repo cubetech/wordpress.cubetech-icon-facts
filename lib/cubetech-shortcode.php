@@ -88,7 +88,7 @@ function cubetech_icon_facts_content($posts) {
 			<div class="cubetech-icon-facts-title">
 				' . $title . '
 			</div>
-			<div class="cubetech-icon-facts-content' . $noslideout . '">' . __($post->post_content) . '</div>
+			<div class="cubetech-icon-facts-content' . $noslideout . '">' . __(nl2br($post->post_content)) . '</div>
 			<div class="cubetech-icon-facts-link' . $noslideout . '">
 				<a class="cubetech-icon-facts-button" href="#"><span class="more">' . __('Mehr') . '</span><span class="less">' . __('Weniger') . '</span></a>
 			</div>

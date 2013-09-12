@@ -4,8 +4,6 @@
 .cubetech-icon-facts-image { display: inline-block; position: relative; width: auto; }
 .cubetech-icon-facts-image i { display: inline-block; position: absolute; height: 100%; width: 100%; line-height: 145px; color: white; font-size: 64px; }
 
-.cubetech-icon-facts-title { min-height: 30px; }
-
 .cubetech-icon-facts-content { display: none; text-align: center; }
 .cubetech-icon-facts-content.cubetech-icon-facts-noslideout { display: block; }
 .cubetech-icon-facts-link.cubetech-icon-facts-noslideout { display: none; }
