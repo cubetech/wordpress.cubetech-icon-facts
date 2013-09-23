@@ -6,6 +6,8 @@
  * Version: 1.1
  * Author: cubetech GmbH
  * Author URI: http://www.cubetech.ch
+ * Text Domain: cubetech-icon-facts
+ * Domain Path: /lang
  */
 
 include_once('lib/cubetech-group.php');
@@ -84,5 +86,11 @@ function cubetech_icon_facts_dialog() {
 	</div>
 	<?php
 }
+
+function cubetech_icon_facts_language_init() {
+	$plugin_dir = basename(dirname(__FILE__));
+	load_plugin_textdomain( 'cubetech-icon-facts', false, $plugin_dir . '/lang/' );
+}
+add_action('plugins_loaded', 'cubetech_icon_facts_language_init');
 
 ?>

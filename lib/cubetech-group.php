@@ -2,15 +2,15 @@
 function cubetech_icon_facts_create_taxonomy() {
 
 	$labels = array(
-		'name'                => __( 'Factsgruppen'),
-		'singular_name'       => __( 'Factsgruppe' ),
-		'search_items'        => __( 'Gruppen durchsuchen' ),
-		'all_items'           => __( 'Alle Factsgruppen' ),
-		'edit_item'           => __( 'Factsgruppe bearbeiten' ), 
-		'update_item'         => __( 'Factsgruppe aktualisiseren' ),
-		'add_new_item'        => __( 'Neue Factsgruppe hinzufügen' ),
-		'new_item_name'       => __( 'Gruppenname' ),
-		'menu_name'           => __( 'Factsgruppe' )
+		'name'                => __( 'Factsgruppen', 'cubetech-icon-facts'),
+		'singular_name'       => __( 'Factsgruppe', 'cubetech-icon-facts' ),
+		'search_items'        => __( 'Gruppen durchsuchen', 'cubetech-icon-facts' ),
+		'all_items'           => __( 'Alle Factsgruppen', 'cubetech-icon-facts' ),
+		'edit_item'           => __( 'Factsgruppe bearbeiten', 'cubetech-icon-facts' ), 
+		'update_item'         => __( 'Factsgruppe aktualisiseren', 'cubetech-icon-facts' ),
+		'add_new_item'        => __( 'Neue Factsgruppe hinzufügen', 'cubetech-icon-facts' ),
+		'new_item_name'       => __( 'Gruppenname', 'cubetech-icon-facts' ),
+		'menu_name'           => __( 'Factsgruppe', 'cubetech-icon-facts' )
 	);
 
 	$args = array(
