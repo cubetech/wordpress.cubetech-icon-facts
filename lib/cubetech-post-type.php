@@ -15,7 +15,6 @@ function cubetech_icon_facts_create_post_type() {
 				'not_found_in_trash' => __('Keine Facts gefunden.')
 			),
 			'capability_type' => 'post',
-			'taxonomies' => false,
 			'public' => true,
 			'has_archive' => false,
 			'rewrite' => array('slug' => 'icon-facts', 'with_front' => false),
@@ -23,7 +22,7 @@ function cubetech_icon_facts_create_post_type() {
 			'menu_position' => '20',
 			'menu_icon' => null,
 			'hierarchical' => true,
-			'supports' => array('title', 'editor', 'thumbnail')
+			'supports' => array('title', 'editor', 'thumbnail'),
 		)
 	);
 	flush_rewrite_rules();
