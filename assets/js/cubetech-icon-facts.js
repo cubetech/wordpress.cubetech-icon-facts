@@ -1,6 +1,6 @@
 jQuery(function() {
 
-	jQuery('.cubetech-icon-facts-button').click(function(){
+	jQuery('.cubetech-icon-facts-button-slide').click(function(){
 		if(jQuery(this).parent().parent().find('.cubetech-icon-facts-content').text().length > 0) {
 			jQuery(this).parent().parent().find('.cubetech-icon-facts-content').slideToggle(200);
 		}

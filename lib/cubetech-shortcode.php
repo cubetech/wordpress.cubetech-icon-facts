@@ -23,7 +23,7 @@ function cubetech_icon_facts_shortcode($atts)
 		'order'           	=> $order,
 		'post_type'       	=> 'cubetech_icon_facts',
 		'post_status'     	=> $poststatus,
-		'suppress_filters' 	=> true,
+		'suppress_filters' 	=> false,
 		'tax_query' => array(
 		    array(
 		        'taxonomy' => 'cubetech_icon_facts_group',
@@ -81,6 +81,13 @@ function cubetech_icon_facts_content($posts) {
 				' . $image . '
 			</div>
 ';
+
+		if(isset($post_meta_data['cubetech_icon_facts_externallink'][0]) && $post_meta_data['cubetech_icon_facts_externallink'][0] != '')
+			$link = '<a class="cubetech-icon-facts-button" href="' . $post_meta_data['cubetech_icon_facts_externallink'][0] . '" target="_blank">' . __('Mehr', 'cubetech-icon-facts') . '</a>';
+		elseif ( $post_meta_data['cubetech_icon_facts_links'][0] != '' && $post_meta_data['cubetech_icon_facts_links'][0] != 'nope' && $post_meta_data['cubetech_icon_facts_links'][0] > 0 )
+			$link = '<a class="cubetech-icon-facts-button" href="' . get_permalink( $post_meta_data['cubetech_icon_facts_links'][0] ) . '">' . __('Mehr', 'cubetech-icon-facts') . '</a>';
+		else
+			$link = '<a class="cubetech-icon-facts-button cubetech-icon-facts-button-slide" href="#"><span class="more">' . __('Mehr', 'cubetech-icon-facts') . '</span><span class="less">' . __('Weniger', 'cubetech-icon-facts') . '</span></a>';
 		
 		$contentreturn .= '
 		<div class="cubetech-icon-facts">
@@ -90,7 +97,7 @@ function cubetech_icon_facts_content($posts) {
 			</div>
 			<div class="cubetech-icon-facts-content' . $noslideout . '">' . __(nl2br($post->post_content)) . '</div>
 			<div class="cubetech-icon-facts-link' . $noslideout . '">
-				<a class="cubetech-icon-facts-button" href="#"><span class="more">' . __('Mehr', 'cubetech-icon-facts') . '</span><span class="less">' . __('Weniger', 'cubetech-icon-facts') . '</span></a>
+				' . $link . '
 			</div>
 		</div>';
 		
