@@ -18,7 +18,7 @@ include_once('lib/cubetech-shortcode.php');
 add_image_size( 'cubetech-icon-facts-thumb', 145, 145 );
 
 wp_enqueue_script('jquery');
-wp_register_script('cubetech_icon_facts_js', plugins_url('assets/js/cubetech-icon-facts.js', __FILE__), 'jquery');
+wp_register_script('cubetech_icon_facts_js', plugins_url('assets/js/cubetech-icon-facts.js', __FILE__), array('jquery','wpdialogs'));
 wp_enqueue_script('cubetech_icon_facts_js');
 
 add_action('wp_enqueue_scripts', 'cubetech_icon_facts_add_styles');
@@ -42,7 +42,14 @@ function cubetech_icon_facts_addbuttons() {
 		add_action( 'admin_footer', 'cubetech_icon_facts_dialog' );
 	}
 }
- 
+if(!function_exists('enqueue_css'))
+{
+	function enqueue_css()
+	{
+		wp_register_style('custom_jquery-ui-dialog', plugins_url('assets/css/jquery-ui-dialog.min.css', __FILE__) );
+		wp_enqueue_style('custom_jquery-ui-dialog');
+	}
+} 
 function register_cubetech_icon_facts_button($buttons) {
    array_push($buttons, "|", "cubetech_icon_facts_button");
    return $buttons;
