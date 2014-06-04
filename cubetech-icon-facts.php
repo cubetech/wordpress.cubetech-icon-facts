@@ -49,7 +49,10 @@ if(!function_exists('enqueue_css'))
 		wp_register_style('custom_jquery-ui-dialog', plugins_url('assets/css/jquery-ui-dialog.min.css', __FILE__) );
 		wp_enqueue_style('custom_jquery-ui-dialog');
 	}
+	add_action( 'admin_enqueue_scripts', 'enqueue_css' );
 } 
+
+
 function register_cubetech_icon_facts_button($buttons) {
    array_push($buttons, "|", "cubetech_icon_facts_button");
    return $buttons;
